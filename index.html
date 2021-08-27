@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+	--clr_base:#F8F0F0;
+	--clr_light:#88CDFF;
+	--clr_med:#6CA7EC;
+	--clr_accent:#b0a7ac;
+	--clr_red:#de5246;
+	--clr_green:#1aa260;
+}
+
+html{
+	background-image: url(https://www.wallpapertip.com/wmimgs/13-139177_windows-95-cloud-background.png);
+	background-attachment: fixed;
+	scroll-behavior: smooth;
+	font-family: 'Roboto Mono', monospace;
+}
+
+body{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.container{
+
+	max-width:50ch;
+	height: auto;
+	background: var(--clr_med);
+	border: 5px solid var(--clr_med);
+}
+
+.top{
+	width:auto;
+	height:auto;
+	margin:0;
+	display:flex;
+	flex-direction: row;
+	align-items:center;
+	background-image: linear-gradient(var(--clr_base), var(--clr_light));
+	font-size: .5rem;
+	padding-left:2rem;
+}
+
+.top h1{
+	width:90%;
+}
+
+.circle{
+	
+	width:.5rem;
+	height:.5rem;
+	border-radius:50%;
+	background:var(--clr_green);
+	margin:.5rem;
+	opacity:.8;
+	cursor:pointer;
+	
+}
+
+
+.circle:hover{opacity:1;
+border:1px solid var(--clr_med);}
+
+#collapse{
+display:none;
+}
+#collapse2{
+display:none;
+}
+#collapse3{
+display:none;
+}
+.sub{
+	width:auto;
+	height:auto;
+	margin: 0;
+	background-image: linear-gradient(var(--clr_base), var(--clr_light));	
+	margin: 0;
+	padding-top:.1px;
+	padding-bottom:.1px;
+	font-size: .35rem;
+	word-spacing: 1rem;
+	padding-left: 1.5rem;
+}	
+
+.search{
+	display:flex;
+	width:auto;
+	height:auto;
+	margin: 0 0 .5rem 0;
+	font-size:.35rem;
+	align-items:center;	
+	
+}
+
+.butt{
+	width:10%;
+	background-color:var(--clr_accent);
+	margin:0;
+	text-align:right;
+	padding-right:.5rem;
+	
+}
+
+.bar{
+	flex-grow:1;
+	background-color:var(--clr_base);
+	margin:0;
+	padding-left:.5rem;
+}
+
+.info{
+	display:flex;
+	width:auto;
+	height:auto;
+	margin: 0;
+	
+}
+
+.section1{
+	width: 40%;
+	margin: 0;
+	background-color:var(--clr_light);
+	text-align:center;
+	display:flex;
+	flex-direction: column;
+	justify-content:center
+}
+
+section1 h1{
+font-weight:bold;
+}
+
+.section2{
+	flex-grow:1;
+	background-color:var(--clr_base);
+	margin:0;
+	padding-bottom:1rem;
+	text-align:center;
+	
+}
+
+.section2 h2{
+	font-size:1.25rem;
+	margin:.5rem;
+}
+
+.section3{
+	width: 40%;
+	margin: 0;
+	background-color:var(--clr_light);
+	text-align:center;
+	justify-content:center;
+	display:flex;
+	
+	flex-direction: column;
+	
+}
+.section3 h1{
+	font-size:1rem;
+}
+.stuff{
+	font-size:1rem;
+	line-height:1.5;
+	margin:0;
+}
+
+.snap{
+	padding:.5rem;
+}
+img {
+    transition:transform 0.25s ease;
+}
+
+img:hover {
+    -webkit-transform:scale(3.5);
+    transform:scale(3.5);
+}
+
+
+
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	margin:.5rem 0;
+	padding: .25rem;
+	border: .2rem solid var(--clr_med);
+	border-radius: .25rem;
+	
+	
+}
+.btn:hover,
+.btn:focus{
+	background: var(--clr_accent);
+	opacity: .8;
+}
+</style>
+<title>Personal Portfolio</title>
+<header>
+
+</header>
+
+<body>
+
+<div class="container">
+	<div class="top">
+		<h1>Portfolio</h1>
+		<div class="circle" onclick="openDiv()"></div>
+	</div>
+	<div id="collapse">
+		<div class="sub">
+			<h1>View Edit Other </h1>
+		</div>
+		<div class="search">
+			<div class="butt">
+				<h1>Search:</h1>
+			</div>
+			<div class="bar">
+				<h1>System Files</h1>
+			</div>
+		</div>
+		<div class="top">
+		<h1>About Me</h1>
+		<div class="circle"onclick="openDiv2()"></div>
+		</div>
+		<div id="collapse2">
+			<div class="info">
+				<div class="section1">
+					<h1>Dante Montague</h1>
+					<p>22</p>
+				</div>
+				<div class="section2">
+					<h2>Education</h2>
+					<p class="stuff"> >Major in Criminology </p>
+					<p class="stuff"> >Minor in Chemistry and Psychology </p>
+					<h2>Skills</h2>
+					<p class="stuff"> >HTML and CSS Certified </p>
+					<p class="stuff"> >Simple Javascript for Websites </p>
+					<p class="stuff"> >Digital Designs</p>
+					<p class="stuff"> >Clothing Design </p>
+					<h2>Experience</h2>
+					<p class="stuff"> >Vice-President of Tamuk Esports </p>
+					<p class="stuff"> >Lab Work </p>
+					<p class="stuff"> >Freelance Consulting </p>
+				</div>
+			</div>
+		</div>
+		<div class="top">
+		<h1>Projects</h1>
+		<div class="circle"onclick="openDiv3()"></div>
+		</div>
+		<div id="collapse3">
+			<div class="info">
+				<div class="section3">
+					<img class="snap" src="siteshot1.png">
+					<h1>Custom Sync Pair Maker</h1>
+					
+				</div>
+				<div class="section2">
+					<p class="stuff"> >A website made for r/pokemonmasters a subreddit dedicated to the Pokemon Masters Ex Mobile Game</p>
+					<p class="stuff"> >This Website allows users to create a custom character for the game using basic html and css as a template and javascript selectors to fully customize it</p>
+					<a href="https://thedm0n.github.io/CustomSyncPair/" target="_blank" class="btn">View Site</a>
+				</div>
+			</div>
+			<div class="info">
+				<div class="section3">
+					<img class="snap" src="siteshot2.png">
+					<h1>Cooler Math Games</h1>
+					
+				</div>
+				<div class="section2">
+					<p class="stuff"> >A website featuring simple games meant to pass the time and spark creativity</p>
+					<p class="stuff"> >Made using simple javascript and css</p>
+					<a href="https://thedm0n.github.io/RockPaperXue/" target="_blank" class="btn">View Site</a>
+				</div>
+			</div>
+			<div class="info">
+				<div class="section3">
+					<img class="snap" src="siteshot3.png">
+					<h1>Milllktea Merch Shop</h1>
+					
+				</div>
+				<div class="section2">
+					<p class="stuff"> >A website designed using spreadshirt layout and simple css for popular Twitch streamer Yan</p>
+					<p class="stuff"> >Created and edited all designs based off of a boba milk tea shop</p>
+					<a href="https://milk-tee-shop.myspreadshop.com/" target="_blank" class="btn">View Site</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+</body>
+
+<footer>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+function openDiv(){
+
+  var x = document.getElementById("collapse");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function openDiv2(){
+
+  var x = document.getElementById("collapse2");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function openDiv3(){
+
+  var x = document.getElementById("collapse3");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+</script>
+</html>
